@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+    <div class="snowflake">
+        {% for snowflake in snowflake %}
+            <div class="snowflake">
+                
+                 <h3>{{snowflake.nom}}</h3>
+                 <p>{{snowflake.nombrebonheur}}</p>  
+                 <p>{{snowflake.description}}</p>    
+                 <p>{{snowflake.createdat|date('j M à h:i:s')}}</p> 
+            </div>
+
+        {% endfor %} 
+    </div>
+{% endblock %}
